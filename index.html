@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#160d24" />
+  <title>A Little Light, Just for You ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="sparkle-layer" id="sparkles"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Home" onclick="goTo(0);return false;">diwali<span>✦</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <button class="nav-link active" data-page="0">Home</button>
+      <button class="nav-link" data-page="1">Moments</button>
+      <button class="nav-link" data-page="2">Wish</button>
+      <button class="nav-link" data-page="3">Surprise</button>
+    </nav>
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu">
+    <button data-page="0">01 · Home</button><button data-page="1">02 · Moments</button>
+    <button data-page="2">03 · Wish</button><button data-page="3">04 · Surprise</button>
+  </nav>
+
+  <main>
+    <section class="page active" id="page-0">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE FESTIVE MAGIC <span class="eyebrow-line"></span></p>
+          <p class="script small-script">For someone special</p>
+          <h1>Happy<br><em>Diwali</em><span class="heart">✧</span></h1>
+          <p class="hero-text">My Bear, may this little corner of the internet bring a little extra light to your day.</p>
+          <button class="gold-button" onclick="goTo(1)">Open your surprise <span>↗</span></button>
+          <p class="tiny-note">made with warmth, just for you</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="moon"></div>
+          <div class="cityline"></div>
+          <div class="lantern lantern-a"><i></i></div><div class="lantern lantern-b"><i></i></div>
+          <div class="lantern lantern-c"><i></i></div>
+          <div class="diya diya-main"><div class="flame"></div><div class="bowl"></div><div class="light-pool"></div></div>
+          <div class="floor-glow"></div>
+          <div class="hero-caption">let the little lights find you</div>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL INTO THE MAGIC <span>↓</span></div>
+    </section>
+
+    <section class="page" id="page-1">
+      <div class="section-heading">
+        <p class="eyebrow">A FEW FRAMES OF HAPPINESS</p>
+        <h2>Little <em>Moments</em></h2>
+        <p class="section-subtitle">Some moments are small, but somehow they stay with us.</p>
+      </div>
+      <div class="photo-grid">
+        <figure class="polaroid tilt-left">
+          <div class="photo-frame"><img src="assets/photos/photo1.jpg" alt="A shared memory" onerror="this.parentElement.classList.add('photo-placeholder')"></div>
+          <figcaption>One of my favourite moments <span>✦</span></figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <div class="photo-frame"><img src="assets/photos/photo2.jpg" alt="A happy memory" onerror="this.parentElement.classList.add('photo-placeholder')"></div>
+          <figcaption>Good times, always <span>♡</span></figcaption>
+        </figure>
+        <figure class="polaroid tilt-small">
+          <div class="photo-frame"><img src="assets/photos/photo3.jpg" alt="Another shared memory" onerror="this.parentElement.classList.add('photo-placeholder')"></div>
+          <figcaption>A little piece of joy <span>✧</span></figcaption>
+        </figure>
+      </div>
+      <p class="memory-footnote">Replace these frames with your own pictures in <code>assets/photos</code>.</p>
+      <button class="text-button" onclick="goTo(2)">There's a wish for you <span>→</span></button>
+    </section>
+
+    <section class="page" id="page-2">
+      <div class="wish-layout">
+        <div class="wish-art">
+          <div class="mandala"></div>
+          <div class="big-diya"><div class="big-flame"></div><div class="big-bowl"></div></div>
+          <div class="wish-art-caption">a light for every lovely thing ahead</div>
+        </div>
+        <article class="wish-card">
+          <p class="eyebrow">A NOTE FROM ME TO YOU</p>
+          <h2>My Diwali <em>Wish</em></h2>
+          <p class="letter-greeting">Dear My Bear,</p>
+          <p>May your days be filled with little reasons to smile, your heart feel light, and your dreams find their way to you.</p>
+          <p>May this Diwali bring you peace when life feels busy, courage when things feel uncertain, and beautiful surprises when you least expect them.</p>
+          <p>Keep being your lovely, one-of-a-kind self. The world needs more of your kind of light.</p>
+          <p class="script signoff">Stay happy, always. ♡</p>
+          <button class="gold-button" onclick="goTo(3)">One last little thing <span>↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="page-3">
+      <div class="final-scene">
+        <p class="eyebrow">BEFORE YOU GO...</p>
+        <h2>One last <em>surprise</em></h2>
+        <p class="final-intro">There's a tiny note waiting for you.</p>
+        <button class="envelope" id="envelope" aria-label="Open the golden envelope">
+          <span class="envelope-glow"></span><span class="envelope-back"></span>
+          <span class="envelope-letter">A little note<br>for you ♡</span>
+          <span class="envelope-front"></span><span class="envelope-seal">✦</span>
+        </button>
+        <p class="tap-hint" id="tapHint">TAP THE ENVELOPE TO OPEN</p>
+        <article class="final-letter" id="finalLetter">
+          <p class="script">My Bear,</p>
+          <p>Some people make ordinary days feel a little brighter just by being themselves. I hope this festive season gives you a hundred reasons to smile.</p>
+          <p>Thank you for the laughs, the conversations, and all the little moments in between.</p>
+          <h3>Keep shining. Happy Diwali! <span>♡</span></h3>
+          <p class="signature">With warm wishes,<br><strong>Neeraj</strong></p>
+        </article>
+        <button class="restart-button" onclick="goTo(0)">↶ Experience it again</button>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>made of light & little thoughts</span><span>✦</span><span>Happy Diwali</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
